@@ -8,3 +8,6 @@ This is a basic multipage site with one import into views of mathFns.py,
 used to process a number entered in a form and display the result on a result.html page.
 
 Here are some changes to this file I made on github so that I can pull it first before pushing changea I made locally.
+I pulled it with git pull origin main. It said already up to date.
+
+I added this new sentence and will commit again now.
