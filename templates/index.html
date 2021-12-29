@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+  </head>
+  <body>
+    <h1>Homepage</h1>
+    <p>Go to <a href="{% url 'contacts' %}">Contacts</a> </p>
+
+    <h2>Forms</h2>
+    <p>Go to <a href="{% url 'result'%}">Result</a></p>
+
+    <!-- removed method="post" to avoid MultiValueDictKeyError
+   form action redirects to the page in url, and includes the input value  -->
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+      <label for="">Enter a number to be squared</label>
+      <input type="text" name="userInput" >
+      <input type="submit" value="Submit">
+      <!-- a button effectively -->
+
+    </form>
+
+    <hr />
+
+    <button onclick="makeBGGreen()">Make BG Green</button>
+    <img src="{% static 'african-elephant.webp' %}" alt="elephant">
+
+    <script type="text/javascript" src="{% static 'main.js' %}">
+
+    </script>
+  </body>
+</html>
